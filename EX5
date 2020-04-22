@@ -1,0 +1,43 @@
+
+def is_leap_year(day,month,year):
+ """
+in tabe kabise boodane sal ra moshakhas mikonad
+ """
+ if (year % 4) == 0 :
+     if (year % 100) == 0 :
+         if (year % 400) == 0 :
+             print("{0} is a leap year".format(year))
+             return True
+         else :
+             print("{0} is not a leap year".format(year))
+             return False
+     else :
+         print("{0} is a leap year".format(year))
+         return True
+ else :
+     print("{0} is not a leap year".format(year))
+     return False
+
+
+
+
+
+def day_of_year(day,month):
+    if is_leap_year(year) == True :
+     months = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    else :
+        months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    month_counter=0
+
+    for month_days in months:
+
+     month_counter +=1
+
+     if month_counter == month :
+         break
+     day = month_days + day
+    return day
+day=day_of_year(day,month)
+print('its ',day,'th day of year')
+
+
