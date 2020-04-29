@@ -21,10 +21,10 @@ julian_date()
 
 
 
-def print_zero_to_num(num):
+ddef print_zero_to_num(num):
     for i in range(num+1):
         print(i)
-
+print_zero_to_num(int(input(("enter a number: "))))
 
 
 
